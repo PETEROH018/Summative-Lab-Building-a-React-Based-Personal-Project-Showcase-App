@@ -49,6 +49,7 @@ export default function UpdateShoeForm(){
         id={changeNameId}
         value={selected} 
         onChange={handleOnSelect}
+        required
       >
         <option value="">--Select shoe-- </option>
         {shoes.map((item) => (
