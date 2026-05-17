@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function ShoeCard({shoe}) {
     return (
@@ -7,6 +8,9 @@ export default function ShoeCard({shoe}) {
              <div className="card-body text-center d-flex flex-column">
                 <h4 className="card-title mb-3">{shoe.name}</h4>
                 <p className="card-text text-muted">ksh: {shoe.price}</p>
+                 <Link  to={`/product/${shoe.id}`} className="btn btn-success">
+                     View Shoe
+                </Link>
             </div>
         </div>
 
