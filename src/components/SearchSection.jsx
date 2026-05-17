@@ -21,21 +21,35 @@ export default function SearchSection(){
         }
     return (
     <>
-        <form>
-      <div >
-        <input
-          type="text"
-          className="form-control"
-          id={searchNameId}
-          aria-describedby="searchShoeName"
-          name="searchshoename"
-          placeholder="Search shoe by name"
-          value = {query}
-          onChange={HandleOnChange}
-         />
-      </div>
-    </form>
-         {queryResult.map(shoe => <ShoeCard key= {shoe.id} shoe={shoe}/>)}
+          <div className="d-flex justify-content-center align-items-center vh-150 bg-light ">
+              <div className="card-body text-center p-4">
+                <form>
+                    <div >
+                        <input
+                            type="text"
+                            className="form-control"
+                            id={searchNameId}
+                            aria-describedby="searchShoeName"
+                            name="searchshoename"
+                            placeholder="Search shoe by name"
+                            value = {query}
+                            onChange={HandleOnChange}
+                        />
+                    </div>
+                 </form>
+                </div>
+            </div>
+  
+    <div className="container my-5">
+     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        {queryResult.map(shoe => 
+        <div className="col" key= {shoe.id}>
+        <ShoeCard  shoe={shoe}/>
+        </div>
+        )}
+     </div>
+    </div>
+         
     </>
     
     )

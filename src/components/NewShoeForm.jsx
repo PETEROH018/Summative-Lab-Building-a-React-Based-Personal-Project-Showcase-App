@@ -34,6 +34,7 @@ export default function NewShoeForm(){
                 })
               .then((data) => {
                 setShoes((prev)=> [...prev,newShoe])
+                alert("Added a new shooe successfully")
                 setNewShoe(
                     {
                            name: "",
@@ -45,7 +46,7 @@ export default function NewShoeForm(){
                     }
                 )
               })
-              .catch ((error) => console.error(error))
+              .catch ((error) => alert("Failed to add new shoe, please try again"))
             }
         function handleOnChange(event){
               setNewShoe((prev) => ({...prev, [event.target.name] : event.target.value}))
@@ -53,8 +54,8 @@ export default function NewShoeForm(){
             }
     return (
         <form onSubmit={handleOnSubmit}>
-      <div >
-        <label htmlFor={nameId} >
+      <div className="mb-3">
+        <label htmlFor={nameId} className="form-label" >
           Shoe name
         </label >
         <input
@@ -64,10 +65,11 @@ export default function NewShoeForm(){
           name="name"
           value={newShoe.name}
           onChange={handleOnChange}
+          required
          />
       </div>
-      <div >
-        <label htmlFor={descriptionId}>
+      <div className="mb-3">
+        <label htmlFor={descriptionId} className="form-label">
           Description
         </label>
         <input
@@ -77,11 +79,11 @@ export default function NewShoeForm(){
           name="description"
           value = {newShoe.description}
           onChange={handleOnChange}
-
+          required
         />
       </div>
-      <div >
-        <label htmlFor={categoryId}>
+      <div className="mb-3">
+        <label htmlFor={categoryId} className="form-label">
           Category
         </label>
         <input
@@ -91,10 +93,11 @@ export default function NewShoeForm(){
           name="category"
           value={newShoe.category}
           onChange={handleOnChange}
+          required
       />
       </div>
-             <div >
-        <label htmlFor={quantityId}>
+             <div className="mb-3">
+        <label htmlFor={quantityId} className="form-label">
           Quantity
         </label>
         <input
@@ -104,10 +107,11 @@ export default function NewShoeForm(){
           name="quantity"
           value={newShoe.quantity}
           onChange={handleOnChange}
+          required
         />
       </div>
-            <div >
-        <label htmlFor={priceId}>
+            <div className="mb-3">
+        <label htmlFor={priceId} className="form-label">
           Price
         </label>
         <input
@@ -117,10 +121,11 @@ export default function NewShoeForm(){
           name="price"
           value={newShoe.price}
           onChange={handleOnChange}
+          required
         />
       </div>
-    <div >
-        <label htmlFor={imageId}>
+    <div className="mb-3">
+        <label htmlFor={imageId} className="form-label">
           Image URL
         </label>
         <input
@@ -130,11 +135,11 @@ export default function NewShoeForm(){
           name="imageUrl"
           value={newShoe.imageUrl}
           onChange={handleOnChange}
+          required
         />
       </div>
-
-
-      <button type="submit">
+      
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
     </form>

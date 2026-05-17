@@ -25,14 +25,13 @@ export default function UpdateShoeForm(){
           return response.json()
           })
           .then (updatedShoe => {
-          // console.log("updated:",updatedShoe)
           const updatedShoes = shoes.map(shoe => 
           shoe.id === updatedShoe.id ? updatedShoe : shoe
            )
-          console.log(shoes)
+          alert("shoe price updated successful")
           setShoes(updatedShoes);
           })
-          .catch ((error) => console.error(error))
+          .catch ((error) => alert("Failed to update shoe price, please try again"))
     
            }
           function handleOnSelect(event){
@@ -45,13 +44,13 @@ export default function UpdateShoeForm(){
           return(
             <form onSubmit={handleUpdatePrice}>
   <div>
-      <label htmlFor={changeNameId}>Choose an option: </label>
+      <label htmlFor={changeNameId} className="form-label">Choose a shoe:  </label>
       <select 
         id={changeNameId}
         value={selected} 
         onChange={handleOnSelect}
       >
-        <option value="">-- Please choose --</option>
+        <option value="">--Select shoe-- </option>
         {shoes.map((item) => (
           <option key={item.id} value={item.id}>
             {item.name}
@@ -60,8 +59,8 @@ export default function UpdateShoeForm(){
       </select>
     </div>
         <div >
-        <label htmlFor={changePriceId}>
-          Price 
+        <label htmlFor={changePriceId} className="form-label">
+          New Price 
         </label>
         <input
           type="number"
@@ -70,12 +69,12 @@ export default function UpdateShoeForm(){
           name="newprice"
           value={newPrice}
           onChange = {handleCaptureNewPrice}
-          ref = {inputRef}
+          required
         />
       </div>
 
 
-      <button type="submit">
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
       </form>
