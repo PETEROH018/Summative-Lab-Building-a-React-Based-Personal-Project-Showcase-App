@@ -1,183 +1,194 @@
-{ "shoes":[
-  {
-    "id": "1",
-    "name": "Air Max Alpha",
-    "description": "High-performance running shoe with maximum responsive cushioning.",
-    "category": "Running",
-    "quantity": 45,
-    "price": 129.99,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "2",
-    "name": "Classic Leather Oxford",
-    "description": "Premium full-grain leather dress shoe with a polished finish.",
-    "category": "Formal",
-    "quantity": 20,
-    "price": 145.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "3",
-    "name": "Trailblazer Waterproof",
-    "description": "Rugged hiking boot featuring deep traction lugs and waterproof lining.",
-    "category": "Outdoor",
-    "quantity": 15,
-    "price": 159.50,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "4",
-    "name": "Urban Canvas Low",
-    "description": "Minimalist canvas sneaker perfect for everyday casual wear.",
-    "category": "Casual",
-    "quantity": 80,
-    "price": 55.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "5",
-    "name": "Court King High-Top",
-    "description": "Retro basketball sneaker with padded ankle collars for support.",
-    "category": "Athletic",
-    "quantity": 30,
-    "price": 110.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "6",
-    "name": "Velvet Evening Pump",
-    "description": "Elegant stiletto heel lined with plush velvet for formal events.",
-    "category": "Formal",
-    "quantity": 12,
-    "price": 185.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "7",
-    "name": "Cloud foam Slip-On",
-    "description": "Ultra-lightweight walking shoe with breathable mesh upper.",
-    "category": "Casual",
-    "quantity": 65,
-    "price": 75.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "8",
-    "name": "Pro Striker Cleats",
-    "description": "Aerodynamic soccer cleats designed for firm ground acceleration.",
-    "category": "Athletic",
-    "quantity": 25,
-    "price": 135.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "9",
-    "name": "Daily Comfort Loafer",
-    "description": "Suede slip-on loafer with a memory foam insole.",
-    "category": "Casual",
-    "quantity": 40,
-    "price": 89.99,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "10",
-    "name": "Summit Ridge Boot",
-    "description": "Insulated winter boot rated for sub-zero temperatures.",
-    "category": "Outdoor",
-    "quantity": 18,
-    "price": 199.99,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "11",
-    "name": "Swift Glide Trainer",
-    "description": "Lightweight cross-trainer optimized for gym workouts.",
-    "category": "Athletic",
-    "quantity": 50,
-    "price": 95.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "12",
-    "name": "Modern Brogue",
-    "description": "Traditional wingtip design with contemporary colored sole accents.",
-    "category": "Formal",
-    "quantity": 22,
-    "price": 160.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "13",
-    "name": "Eco-Step Recycled Sneaker",
-    "description": "Sustainable sneaker crafted entirely from recycled ocean plastics.",
-    "category": "Casual",
-    "quantity": 35,
-    "price": 115.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "14",
-    "name": "Sand Dune Slide",
-    "description": "Water-resistant rubber slide sandal for beach or poolside wear.",
-    "category": "Casual",
-    "quantity": 100,
-    "price": 30.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "15",
-    "name": "Hyper Jump Volleyball",
-    "description": "Indoor court shoe featuring advanced lateral stability wraps.",
-    "category": "Athletic",
-    "quantity": 14,
-    "price": 105.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "16",
-    "name": "Chelsea Commuter Boot",
-    "description": "Sleek ankle boot with elastic side panels and weatherproofing.",
-    "category": "Casual",
-    "quantity": 28,
-    "price": 150.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "17",
-    "name": "Marathon Pace Racer",
-    "description": "Ultra-thin carbon-plated racing shoe for competitive distance running.",
-    "category": "Running",
-    "quantity": 10,
-    "price": 250.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "18",
-    "name": "Patent Leather Mule",
-    "description": "High-shine pointed toe mule with a comfortable block heel.",
-    "category": "Formal",
-    "quantity": 16,
-    "price": 125.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "19",
-    "name": "Canyon River Sandal",
-    "description": "Strappy outdoor sandal with quick-dry webbing and rugged tread.",
-    "category": "Outdoor",
-    "quantity": 42,
-    "price": 68.00,
-    "imageUrl": "picsum.photos"
-  },
-  {
-    "id": "20",
-    "name": "Skate Pulse Pro",
-    "description": "Durable suede skateboard shoe with reinforced rubber toe caps.",
-    "category": "Casual",
-    "quantity": 33,
-    "price": 85.00,
-    "imageUrl": "picsum.photos"
-  }
-]
+{
+  "shoes": [
+    {
+      "id": "1",
+      "name": "Air Max Alpha",
+      "description": "High-performance running shoe with maximum responsive cushioning.",
+      "category": "Running",
+      "quantity": 45,
+      "price": 129.99,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "2",
+      "name": "Classic Leather Oxford",
+      "description": "Premium full-grain leather dress shoe with a polished finish.",
+      "category": "Formal",
+      "quantity": 20,
+      "price": 145,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "3",
+      "name": "Trailblazer Waterproof",
+      "description": "Rugged hiking boot featuring deep traction lugs and waterproof lining.",
+      "category": "Outdoor",
+      "quantity": 15,
+      "price": 159.5,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "4",
+      "name": "Urban Canvas Low",
+      "description": "Minimalist canvas sneaker perfect for everyday casual wear.",
+      "category": "Casual",
+      "quantity": 80,
+      "price": 55,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "5",
+      "name": "Court King High-Top",
+      "description": "Retro basketball sneaker with padded ankle collars for support.",
+      "category": "Athletic",
+      "quantity": 30,
+      "price": 110,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "6",
+      "name": "Velvet Evening Pump",
+      "description": "Elegant stiletto heel lined with plush velvet for formal events.",
+      "category": "Formal",
+      "quantity": 12,
+      "price": 185,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "7",
+      "name": "Cloud foam Slip-On",
+      "description": "Ultra-lightweight walking shoe with breathable mesh upper.",
+      "category": "Casual",
+      "quantity": 65,
+      "price": 75,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "8",
+      "name": "Pro Striker Cleats",
+      "description": "Aerodynamic soccer cleats designed for firm ground acceleration.",
+      "category": "Athletic",
+      "quantity": 25,
+      "price": 135,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "9",
+      "name": "Daily Comfort Loafer",
+      "description": "Suede slip-on loafer with a memory foam insole.",
+      "category": "Casual",
+      "quantity": 40,
+      "price": 89.99,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "10",
+      "name": "Summit Ridge Boot",
+      "description": "Insulated winter boot rated for sub-zero temperatures.",
+      "category": "Outdoor",
+      "quantity": 18,
+      "price": 199.99,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "11",
+      "name": "Swift Glide Trainer",
+      "description": "Lightweight cross-trainer optimized for gym workouts.",
+      "category": "Athletic",
+      "quantity": 50,
+      "price": 95,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "12",
+      "name": "Modern Brogue",
+      "description": "Traditional wingtip design with contemporary colored sole accents.",
+      "category": "Formal",
+      "quantity": 22,
+      "price": 160,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "13",
+      "name": "Eco-Step Recycled Sneaker",
+      "description": "Sustainable sneaker crafted entirely from recycled ocean plastics.",
+      "category": "Casual",
+      "quantity": 35,
+      "price": 115,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "14",
+      "name": "Sand Dune Slide",
+      "description": "Water-resistant rubber slide sandal for beach or poolside wear.",
+      "category": "Casual",
+      "quantity": 100,
+      "price": 30,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "15",
+      "name": "Hyper Jump Volleyball",
+      "description": "Indoor court shoe featuring advanced lateral stability wraps.",
+      "category": "Athletic",
+      "quantity": 14,
+      "price": 105,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "16",
+      "name": "Chelsea Commuter Boot",
+      "description": "Sleek ankle boot with elastic side panels and weatherproofing.",
+      "category": "Casual",
+      "quantity": 28,
+      "price": 150,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "17",
+      "name": "Marathon Pace Racer",
+      "description": "Ultra-thin carbon-plated racing shoe for competitive distance running.",
+      "category": "Running",
+      "quantity": 10,
+      "price": "3000",
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "18",
+      "name": "Patent Leather Mule",
+      "description": "High-shine pointed toe mule with a comfortable block heel.",
+      "category": "Formal",
+      "quantity": 16,
+      "price": 125,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "19",
+      "name": "Canyon River Sandal",
+      "description": "Strappy outdoor sandal with quick-dry webbing and rugged tread.",
+      "category": "Outdoor",
+      "quantity": 42,
+      "price": 68,
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "id": "20",
+      "name": "Skate Pulse Pro",
+      "description": "Durable suede skateboard shoe with reinforced rubber toe caps.",
+      "category": "Casual",
+      "quantity": 33,
+      "price": "2500",
+      "imageUrl": "picsum.photos"
+    },
+    {
+      "name": "Skate Pulse Pro",
+      "description": "Durable suede skateboard shoe with reinforced rubber toe caps",
+      "category": "Casual",
+      "quantity": "100",
+      "price": "2000",
+      "imageUrl": "picsum.photos",
+      "id": "mCKUKHXVVJA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
