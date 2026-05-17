@@ -70,6 +70,7 @@ export default function UpdateShoeForm(){
           value={newPrice}
           onChange = {handleCaptureNewPrice}
           required
+          ref={inputRef}
         />
       </div>
 
