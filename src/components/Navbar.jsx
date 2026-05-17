@@ -1,8 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 export default function Navbar(){
     return (
-          <nav className="sticky-top navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+     <nav className="sticky-top navbar navbar-expand-lg navbar-dark shadow-sm py-1 "
+               style={{
+                    background: 'linear-gradient(90deg, #071536 0%, #1e293b 100%)',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.08)' 
+                }}
+                >
+      <div className="container-fluid text-white">
         <a className="navbar-brand" href="#">
           Navbar
         </a>
@@ -27,9 +32,6 @@ export default function Navbar(){
               </NavLink>
             </li>
           </ul>
-        </div>
-        <div>
-            
         </div>
       </div>
     </nav>

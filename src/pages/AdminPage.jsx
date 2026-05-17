@@ -8,7 +8,7 @@ export default function AdminPage(){
     return (
     <>
       <Navbar/>
-      <div className="d-flex justify-content-center align-items-center vh-150 bg-light ">
+      <div className="d-flex justify-content-center align-items-center vh-150 bg-light mt-3 ">
         <div className="card border border-primary rounded-5 shadow" style={{width: '35rem'}}>
           <div className="card-body text-center p-4">
             <h3 className="card-title mb-3">Add a new shoe</h3>
