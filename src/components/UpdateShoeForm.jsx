@@ -1,9 +1,10 @@
 import { UseShoes } from '../contexts/ShoesContext'
-import {useId, useState} from 'react'
+import {useId, useRef, useState} from 'react'
 
 export default function UpdateShoeForm(){
         const changeNameId =useId()
         const changePriceId = useId()
+        const inputRef = useRef(null)
         const {shoes,setShoes} = UseShoes()   
         const [selected,setSelected] = useState("")
         const [newPrice,setNewPrice] = useState(0)
@@ -34,6 +35,10 @@ export default function UpdateShoeForm(){
           .catch ((error) => console.error(error))
     
            }
+          function handleOnSelect(event){
+            setSelected(event.target.value)
+            inputRef.current.focus()
+          }
           function handleCaptureNewPrice(event){
             setNewPrice(event.target.value)
           }
@@ -44,7 +49,7 @@ export default function UpdateShoeForm(){
       <select 
         id={changeNameId}
         value={selected} 
-        onChange={(e) => setSelected(e.target.value)}
+        onChange={handleOnSelect}
       >
         <option value="">-- Please choose --</option>
         {shoes.map((item) => (
@@ -65,6 +70,7 @@ export default function UpdateShoeForm(){
           name="newprice"
           value={newPrice}
           onChange = {handleCaptureNewPrice}
+          ref = {inputRef}
         />
       </div>
 
