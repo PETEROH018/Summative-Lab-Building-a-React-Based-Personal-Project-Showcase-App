@@ -1,7 +1,6 @@
 import { useEffect, useId, useState } from "react"
 import ShoeCard from "../components/ShoeCard";
 import { UseShoes } from "../contexts/ShoesContext";
-// import useFetch from "../hooks/useFetch"
 
 export default function SearchSection(){
     
@@ -9,9 +8,6 @@ export default function SearchSection(){
     const [query,setQuery] = useState("")
     const [queryResult,setQueryResult] = useState([])
     const {shoes} = UseShoes()
-    // const fetchedData = useFetch("http://localhost:3000/shoes")
-    // console.log(fetchedData)
-    // setShoes( fetchedData)
     useEffect(()=>{
         const filteredShoes = query === ""
             ? shoes
