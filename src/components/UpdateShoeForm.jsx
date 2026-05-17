@@ -28,8 +28,10 @@ export default function UpdateShoeForm(){
           const updatedShoes = shoes.map(shoe => 
           shoe.id === updatedShoe.id ? updatedShoe : shoe
            )
-          alert("shoe price updated successful")
+          alert("shoe price updated successfuly")
           setShoes(updatedShoes);
+          setSelected("")
+          setNewPrice(0)
           })
           .catch ((error) => alert("Failed to update shoe price, please try again"))
     
