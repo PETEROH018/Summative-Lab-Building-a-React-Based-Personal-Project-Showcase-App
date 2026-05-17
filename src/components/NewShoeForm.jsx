@@ -34,7 +34,7 @@ export default function NewShoeForm(){
                 })
               .then((data) => {
                 setShoes((prev)=> [...prev,newShoe])
-                alert("Added a new shooe successfully")
+                alert("Added a new shoe successfully")
                 setNewShoe(
                     {
                            name: "",
