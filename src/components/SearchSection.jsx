@@ -1,30 +1,43 @@
-import { useEffect, useId, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import ShoeCard from "../components/ShoeCard";
 import { UseShoes } from "../contexts/ShoesContext";
 
 export default function SearchSection(){
     
     const searchNameId = useId()
+    const searchCategoryId = useId()
     const [query,setQuery] = useState("")
+    const [selection,setSelection] = useState("")
     const [queryResult,setQueryResult] = useState([])
     const {shoes} = UseShoes()
     useEffect(()=>{
-        const filteredShoes = query === ""
+        
+        const filteredShoes = query === "" && selection === ""
             ? shoes
-            : shoes.filter(shoe => shoe.name.toLowerCase().includes(query.toLowerCase()))
+            : query!== "" && selection === ""
+            ? shoes.filter(shoe => shoe.name.toLowerCase().includes(query.toLowerCase()))
+            : selection !== "" && query === ""
+            ? shoes.filter(shoe => shoe.category.toLowerCase().includes(selection.toLowerCase()))
+            : shoes.filter(shoe => shoe.category.toLowerCase().includes(selection.toLowerCase())).filter(shoe => shoe.name.toLowerCase().includes(query.toLowerCase()))
+            
         setQueryResult(filteredShoes)
         }
-        ,[query,shoes]
+        ,[query,selection,shoes]
         )
     function HandleOnChange(event){
         setQuery(event.target.value)
-        }
+    }
+        
+    function HandleOnSelection(event){
+        setSelection(event.target.value)
+    }
+
     return (
     <>
-          <div className="d-flex justify-content-center align-items-center vh-150 bg-light ">
-              <div className="card-body text-center p-4">
-                <form>
-                    <div >
+          <div className="container mt-3 bg-white sticky-top "  style={{top: '35px'}}>
+                <form> 
+                    <div className="row g-2" >
+                    <div className="col">
                         <input
                             type="text"
                             className="form-control"
@@ -35,9 +48,33 @@ export default function SearchSection(){
                             value = {query}
                             onChange={HandleOnChange}
                         />
-                    </div>
+            </div>
+            <div className="col">
+                <label htmlFor={searchCategoryId} className="form-label me-3">Search shoe by category:  </label>
+                <select 
+                    id={searchCategoryId}
+                    value={selection} 
+                    onChange={HandleOnSelection}
+                    required
+                >
+                 <option value="">--Select category-- </option>
+
+                    {
+                    shoes.map(shoe => shoe.category) // map method is used to collect all categories
+                    .reduce((acc,curr) =>{ if(!acc.includes(curr)){
+                        acc.push(curr) // reduce method is used to remove duplicate categories
+                    }
+                    return acc
+                    },[])
+                    .map((item,index) => ( //the second map method is used to display the unique categories
+                        <option key={index} value={item}>
+                        {item}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            </div>
                  </form>
-                </div>
             </div>
   
     <div className="container my-5">

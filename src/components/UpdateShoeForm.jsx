@@ -46,7 +46,7 @@ export default function UpdateShoeForm(){
           return(
             <form onSubmit={handleUpdatePrice}>
   <div>
-      <label htmlFor={changeNameId} className="form-label">Choose a shoe:  </label>
+      <label htmlFor={changeNameId} className="form-label me-3">Choose a shoe:  </label>
       <select 
         id={changeNameId}
         value={selected} 
