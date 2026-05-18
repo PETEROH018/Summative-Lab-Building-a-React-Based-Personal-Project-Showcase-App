@@ -78,7 +78,7 @@ export default function UpdateShoeForm(){
       </div>
 
 
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary mt-3">
         Submit
       </button>
       </form>

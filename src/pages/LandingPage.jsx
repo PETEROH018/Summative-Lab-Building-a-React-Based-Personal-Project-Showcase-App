@@ -6,7 +6,7 @@ export default function LandingPage(){
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${BackgroundImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '550px'
+        minHeight: '630px'
       }}>  
         <div  className="container text-center">
             <h3 className="display-1 mb-4">PETEROH'S SHOES COLLECTION</h3>

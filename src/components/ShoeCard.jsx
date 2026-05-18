@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function ShoeCard({shoe}) {
     return (
-    <div className="d-flex justify-content-center align-items-center  bg-light">
+    <div className="d-flex justify-content-center align-items-center  ">
         <div className="card zoom-card border border-primary rounded-5 shadow " style={{width: '22rem'}}>
              <img src ={shoe.imageUrl} alt={shoe.name} className="card-img-top mt-4"/>              
              <div className="card-body text-center d-flex flex-column">
