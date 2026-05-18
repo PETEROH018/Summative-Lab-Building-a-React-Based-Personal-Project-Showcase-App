@@ -12,7 +12,7 @@ export function ShoesProvider({children}){
       return (
         <ShoesContext.Provider value = {{shoes,setShoes}}>
             {children}
-        </ShoesContext.Provider>
+        </ShoesContext.Provider> 
       )
 
 }
