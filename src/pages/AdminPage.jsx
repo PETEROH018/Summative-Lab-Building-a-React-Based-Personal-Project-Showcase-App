@@ -1,11 +1,11 @@
 import Navbar from '../components/Navbar'
 import NewShoeForm from '../components/NewShoeForm'
 import UpdateShoeForm from '../components/UpdateShoeForm'
+import DeleteSection from '../components/DeleteSection'
+
 export default function AdminPage(){
     
-
-
-    return (
+return (
     <>
       <Navbar/>
       <div className="d-flex justify-content-center align-items-center vh-150 bg-light mt-3 ">
@@ -24,6 +24,7 @@ export default function AdminPage(){
           </div>
          </div>
         </div>
+        <DeleteSection/>
       
      </>
    
