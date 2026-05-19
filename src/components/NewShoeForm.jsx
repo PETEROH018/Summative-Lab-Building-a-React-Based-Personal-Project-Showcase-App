@@ -1,7 +1,7 @@
 import { UseShoes } from '../contexts/ShoesContext'
 import {useId, useState} from 'react'
 
-export default function NewShoeForm(){
+export default function NewShoeForm({setRefreshAdmin}){
         const nameId = useId() 
         const descriptionId = useId()
         const categoryId = useId()
@@ -37,6 +37,7 @@ export default function NewShoeForm(){
               .then((data) => {
                 setShoes((prev)=> [...prev,newShoe]) //setShoes setter function updates the shoes state array with the new shoe for optimistic rendering before the POST request and refetch triggered earlier are completed
                 alert("Added a new shoe successfully")
+                setRefreshAdmin(prev => prev+1)
                 setNewShoe(
                     {
                            name: "",

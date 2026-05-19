@@ -2,9 +2,10 @@ import Navbar from '../components/Navbar'
 import NewShoeForm from '../components/NewShoeForm'
 import UpdateShoeForm from '../components/UpdateShoeForm'
 import DeleteSection from '../components/DeleteSection'
+import { useState } from 'react'
 
 export default function AdminPage(){
-    
+const [refreshAdmin,setRefreshAdmin]=useState(0)    
 return (
     <>
       <Navbar/>
@@ -12,7 +13,7 @@ return (
         <div className="card border border-primary rounded-5 shadow" style={{width: '35rem'}}>
           <div className="card-body text-center p-4">
             <h3 className="card-title mb-3">Add a new shoe</h3>
-            <NewShoeForm/>
+            <NewShoeForm key={`new-${refreshAdmin}`} setRefreshAdmin={setRefreshAdmin}/>
           </div>
         </div>
       </div>
@@ -20,11 +21,11 @@ return (
         <div className="card border border-primary rounded-5 shadow" style={{width: '35rem'}}>
           <div className="card-body text-center p-4">
             <h3 className="card-title mb-3">Change Shoe Price</h3>
-            <UpdateShoeForm/>
+            <UpdateShoeForm key={`update-${refreshAdmin}`} setRefreshAdmin={setRefreshAdmin}/>
           </div>
          </div>
         </div>
-        <DeleteSection/>
+        <DeleteSection key={`delete-${refreshAdmin}`} setRefreshAdmin={setRefreshAdmin}/>
       
      </>
    

@@ -1,6 +1,6 @@
 import { UseShoes } from '../contexts/ShoesContext'
 
-export default function DeleteSection(){
+export default function DeleteSection({setRefreshAdmin}){
      const {setShoes,shoes,setRefetch} = UseShoes() //consuming the shoes,setShoes and setRefetch props provided globally by ShoesContext
 //This function handles deleting a shoe from the json server by making a DELETE request with the id of the shoe to be deleted
      function HandleOnClick(id){
@@ -18,6 +18,7 @@ export default function DeleteSection(){
           const updatedShoes=shoes.filter(shoe => shoe.id !== id) //The filter method is used to create an updatedShoes array that does not include the deleted shoe
           setShoes(updatedShoes) // setShoes setter function is used to update the shoes state array for optimistic rendering before the DELETE request and refetch triggered earlier are completed
           alert("shoe deleted successfuly")
+          setRefreshAdmin(prev => prev+1)
         })
         .catch((error) => alert("could not delete shoe, please try again"))
     

@@ -1,7 +1,7 @@
 import { UseShoes } from '../contexts/ShoesContext'
 import {useId, useRef, useState} from 'react'
 
-export default function UpdateShoeForm(){
+export default function UpdateShoeForm({setRefreshAdmin}){
         const changeNameId =useId()
         const changePriceId = useId()
         const inputRef = useRef(null)
@@ -31,6 +31,7 @@ export default function UpdateShoeForm(){
            ) //This map array method is used to add the updated shoe to the shoes state array 
           alert("shoe price updated successfuly")
           setShoes(updatedShoes) //The updated shoes array is set as the new shoes state for optimitic rendering before the PATCH request and refetch triggered earlier are completed
+          setRefreshAdmin(prev => prev+1)
           setSelected("") //This resets the shoe selection
           setNewPrice(0) //This resets the new price input
           })
