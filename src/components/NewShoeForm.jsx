@@ -8,7 +8,7 @@ export default function NewShoeForm(){
         const quantityId = useId()
         const priceId = useId()
         const imageId = useId()
-        const {shoes,setShoes} = UseShoes()
+        const {shoes,setShoes,setRefetch} = UseShoes() //consuming the shoes,setShoes and setRefetch props provided globally by ShoesContext
         const [newShoe,setNewShoe] = useState({
               name: "",
               description: "",
@@ -16,7 +16,8 @@ export default function NewShoeForm(){
               quantity: 0,
               price: 0,
               imageUrl: ""
-            }) 
+            }) //newShoe state captures a new shoes added by the admin using a form
+//This function handles creating a new shoe in the json server by making a POST request using the shoe data captured from a form
         function handleOnSubmit(event){
               event.preventDefault()
               fetch('http://localhost:3000/shoes',{
@@ -30,10 +31,11 @@ export default function NewShoeForm(){
                 if (!response.ok) {
                   throw new Error (response.status)
                 }
+                setRefetch(prev => prev+1) //Incrementing the refetch value triggers a refetch in the useFetch custom hook to ensure the backend is synchronized with the front end
                 return response.json()
                 })
               .then((data) => {
-                setShoes((prev)=> [...prev,newShoe])
+                setShoes((prev)=> [...prev,newShoe]) //setShoes setter function updates the shoes state array with the new shoe for optimistic rendering before the POST request and refetch triggered earlier are completed
                 alert("Added a new shoe successfully")
                 setNewShoe(
                     {
@@ -44,14 +46,14 @@ export default function NewShoeForm(){
                            price: 0,
                            imageUrl: ""
                     }
-                )
+                ) //This resets the input field of the form used by the admin to add a new shoe to allow for another shoe to be added
               })
               .catch ((error) => alert("Failed to add new shoe, please try again"))
             }
+        //This function handles collecting the new shoe details in real time based on the input field that is currently being typed into
         function handleOnChange(event){
               setNewShoe((prev) => ({...prev, [event.target.name] : event.target.value}))
-          
-            }
+          }
     return (
         <form onSubmit={handleOnSubmit}>
       <div className="mb-3">

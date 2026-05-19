@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
 
 export default function ShoeDetails(){
-  const {id} = useParams()
-  const shoe=useFetch(`http://localhost:3000/shoes/${id}`)
+  const {id} = useParams() //The id parameter is obtained from the route through destructuring the object returned by useParams()
+  const shoe=useFetch(`http://localhost:3000/shoes/${id}`) //useFetch() custom hook is used to GET the shoe details of the shoe with the ID passed from the route
   
   return(
     <>

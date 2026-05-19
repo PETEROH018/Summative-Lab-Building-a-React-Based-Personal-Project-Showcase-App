@@ -1,7 +1,8 @@
 import { UseShoes } from '../contexts/ShoesContext'
 
 export default function DeleteSection(){
-     const {setShoes,shoes} = UseShoes()
+     const {setShoes,shoes,setRefetch} = UseShoes() //consuming the shoes,setShoes and setRefetch props provided globally by ShoesContext
+//This function handles deleting a shoe from the json server by making a DELETE request with the id of the shoe to be deleted
      function HandleOnClick(id){
           fetch(`http://localhost:3000/shoes/${id}`,{
           method : 'DELETE'
@@ -10,11 +11,12 @@ export default function DeleteSection(){
           if (!response.ok){
             throw new Error(response.status)
           } 
+            setRefetch(prev => prev+1) //Incrementing the refetch value triggers a refetch in the useFetch custom hook to ensure the backend is synchronized with the front end
             return response.json()
         })
         .then((deletedShoe) => {
-          const updatedShoes=shoes.filter(shoe => shoe.id !== id)
-          setShoes(updatedShoes)
+          const updatedShoes=shoes.filter(shoe => shoe.id !== id) //The filter method is used to create an updatedShoes array that does not include the deleted shoe
+          setShoes(updatedShoes) // setShoes setter function is used to update the shoes state array for optimistic rendering before the DELETE request and refetch triggered earlier are completed
           alert("shoe deleted successfuly")
         })
         .catch((error) => alert("could not delete shoe, please try again"))
