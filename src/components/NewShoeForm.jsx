@@ -37,7 +37,7 @@ export default function NewShoeForm({setRefreshAdmin}){
               .then((data) => {
                 setShoes((prev)=> [...prev,newShoe]) //setShoes setter function updates the shoes state array with the new shoe for optimistic rendering before the POST request and refetch triggered earlier are completed
                 alert("Added a new shoe successfully")
-                setRefreshAdmin(prev => prev+1)
+                setRefreshAdmin(prev => prev+1) //This updates the refreshAdmin state thus updating the key of NewShoeForm component causing a UI update
                 setNewShoe(
                     {
                            name: "",

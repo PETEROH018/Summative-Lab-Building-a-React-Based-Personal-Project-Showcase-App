@@ -5,7 +5,7 @@ import DeleteSection from '../components/DeleteSection'
 import { useState } from 'react'
 
 export default function AdminPage(){
-const [refreshAdmin,setRefreshAdmin]=useState(0)    
+const [refreshAdmin,setRefreshAdmin]=useState(0) //refreshAdmin state is used to create keys for the AdminPage child components that force the admin page UI update after a successful POST,PATCH or DELETE request.
 return (
     <>
       <Navbar/>

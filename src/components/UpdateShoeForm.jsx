@@ -31,7 +31,7 @@ export default function UpdateShoeForm({setRefreshAdmin}){
            ) //This map array method is used to add the updated shoe to the shoes state array 
           alert("shoe price updated successfuly")
           setShoes(updatedShoes) //The updated shoes array is set as the new shoes state for optimitic rendering before the PATCH request and refetch triggered earlier are completed
-          setRefreshAdmin(prev => prev+1)
+          setRefreshAdmin(prev => prev+1) //This updates the refreshAdmin state thus updating the key of UpdateShoeForm component causing a UI update
           setSelected("") //This resets the shoe selection
           setNewPrice(0) //This resets the new price input
           })

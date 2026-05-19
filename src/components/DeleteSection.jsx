@@ -18,7 +18,7 @@ export default function DeleteSection({setRefreshAdmin}){
           const updatedShoes=shoes.filter(shoe => shoe.id !== id) //The filter method is used to create an updatedShoes array that does not include the deleted shoe
           setShoes(updatedShoes) // setShoes setter function is used to update the shoes state array for optimistic rendering before the DELETE request and refetch triggered earlier are completed
           alert("shoe deleted successfuly")
-          setRefreshAdmin(prev => prev+1)
+          setRefreshAdmin(prev => prev+1) //This updates the refreshAdmin state thus updating the key of DeleteSection component causing a UI update
         })
         .catch((error) => alert("could not delete shoe, please try again"))
     
