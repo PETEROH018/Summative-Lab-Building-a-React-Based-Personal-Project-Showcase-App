@@ -9,7 +9,6 @@ export function ShoesProvider({children}){
       const [shoes,setShoes] = useState([])
       const [refetch,setRefetch] = useState(0) //This state is used to trigger a refetch every time a POST,PUT,PATCH or DELETE request is made
       const fetchedData = useFetch("http://localhost:3000/shoes",refetch)
-      console.log(fetchedData)
       useEffect(()=>{ //This useEffect prevents triggering an infinite re-render by ensuring that the shoes state is only updated when fetchedData changes
                 setShoes(fetchedData)
                },[fetchedData]
